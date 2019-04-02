@@ -16,14 +16,11 @@ operation, thus warrant this simple DIY script.
 ## Set it up
 
 This utility has two dependencies: Python 3 and OpenCV (3.x). The version
-dependency is not critical, it can work under Python 2 with a bit tweak, it is
-just not the priority. Here is one way to set it up:
+dependency is not critical: it can work under Python 2 with a bit tweak. 
+Here is one way to set it up using Anaconda:
 
 * Install [anaconda](https://www.anaconda.com/)
-* Install OpenCV:
-    ```
-    conda install opencv
-    ```
+* Install OpenCV: `conda install opencv`
 * Activate either the base or whatever the new environment you desire.
 
 
@@ -47,7 +44,7 @@ You need to switch between image window and console window for most operations:
 * Once a selection is made and ready to replace, on the image window, key in `r`
   or `R`, then go back to console window to type in new RGB value, such as `255
   0 0` and `Enter` to confirm.
-  To save the image, key in `s` or `S` on the image window, console window will
+* To save the image, key in `s` or `S` on the image window, console window will
   display the new image name, which is composed by old image base name, suffixed
  by `-new`.
 
