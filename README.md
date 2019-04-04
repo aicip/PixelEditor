@@ -1,4 +1,4 @@
-# PixEdit
+# Pixit
 
 This is a simple image editor to fill a particular need. It currently has two
 mode of editing: individual pixel and selected region of interest (defined as
@@ -8,10 +8,13 @@ ROI). The basic workflow is:
 * save the image
 
 What not OpenCV? OpenCV has a function call `selectROI()` which allow you to
-select a rectangle of region of interest as well. However, the multiple ROI
-operation doesn't seem to work, and it also doesn't support `single pixel`
-operation, thus warrant this simple DIY script.
+select a rectangle of region of interest as well. There are several problems
+with it: 
+* Multiple ROI operation doesn't seem to work
+* Have no support `single pixel` operation
+* Have no support of polygon ROI
 
+Thus, this simple DIY script. Please report bugs/requests to [issues](https://github.com/aicip/pixit/issues).
 
 ## Set it up
 
@@ -32,17 +35,17 @@ To run it:
 
 You need to switch between image window and console window for most operations:
 
-|     Select ROI      | Replace with new value |
-| :-----------------: | :--------------------: |
-| ![](rabbit-roi.jpg) |  ![](rabitt-new.jpg)   |
-|                     |    ![](console.jpg)    |
+|      Select ROI      | Replace with new value |
+| :------------------: | :--------------------: |
+| ![](rabbit-roi.jpg)  |  ![](rabitt-new.jpg)   |
+| ![](rabbit-poly.png) |    ![](console.jpg)    |
 
 * To quit: `ESC` key on the image window
-* To select a point: left click mouse button
-* To select a region of interest: left click and drag 
-* Click elsewhere to deselect previous
-* Once a selection is made and ready to replace, on the image window, key in `r`
-  or `R`, then go back to console window to type in new RGB value, such as `255
+* 'p' for selecting a point.
+* 'r' for selecting a rectangular area of interest.
+* 'P' for selecting a polygon, right click to end a selection.
+* 'c' for canceling previous selection.
+* Once a selection is made and ready to replace, on the image window, key in `R`, then go back to console window to type in new RGB value, such as `255
   0 0` and `Enter` to confirm.
 * To save the image, key in `s` or `S` on the image window, console window will
   display the new image name, which is composed by old image base name, suffixed
